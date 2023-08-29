@@ -60,7 +60,7 @@
                 ?>
             </tbody>
         </table>
-        <p> 
+        <p> Total data : 
             <?php echo mysqli_num_rows($query) ?>
         </p>
     </div>
