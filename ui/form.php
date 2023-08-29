@@ -29,12 +29,18 @@ if (isset($_GET['nis'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Siswa</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 <body>
     <header><h3 align="center">Formulir Siswa</h3></header>
+    <br>
     <form action = "proses_pendaftaran.php" method = "POST">
-        <fieldset>
-            <legend><h2>Form Siswa</h2></legend>
+    <div class="container">
+    <div class="card">
+    <div class="card-body">
             <div>
                 <label for="nis"> NIS : </label><br>
                 <input type = "text" name = "nis" value = "<?php if(isset($_GET['nis'])) {$siswa['nis'];}?>"/>
@@ -71,10 +77,12 @@ if (isset($_GET['nis'])) {
                 <input type = "text" name = "kelas" value = "<?php if(isset($_GET['nis'])) {$siswa['kelas'];}?>"/>
             </div>
             <hr>
-            <div>
-                <input type= "submit" value ="Simpan" name="simpan">
+            <div class="d-grid gap-2 col-2 mx-auto">
+            <button type="simpan" class="btn btn-primary" value="simpan" name="simpan">Simpan</button>
             </div>
-        </fieldset>
+        </div>
+        </div>
+        </div>
     </form>
 </body>
 </html>
