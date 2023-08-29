@@ -40,8 +40,8 @@ if (isset($_GET['nis'])) {
                 <input type = "text" name = "nis" value = "<?php if(isset($_GET['nis'])) {$siswa['nis'];}?>"/>
             </div>
             <div>
-                <label for="nama"> Nama : </label><br>
-                <input type = "text" name = "nama" value = "<?php if(isset($_GET['nis'])) {$siswa['nama_lengkap'];}?>"/>
+                <label for="nama_lengkap"> Nama : </label><br>
+                <input type = "text" name = "nama_lengkap" value = "<?php if(isset($_GET['nis'])) {$siswa['nama_lengkap'];}?>"/>
             </div>
             <div>
                 <label for="alamat"> Alamat : </label><br>
@@ -49,7 +49,7 @@ if (isset($_GET['nis'])) {
             </div>
             <div>
                 <label for="jenis_kelamin"> Jenis Kelamin : </label><br>
-                <?php if(isset($_GET['nis'])) {$siswa['jenis_kelamin'];?>
+                <?php if(isset($_GET['nis'])) {$jk = $siswa['jenis_kelamin'];?>
                 <td>
                     <input name="jenis_kelamin" type="radio" value="Laki-laki" <?php if($jk=='Laki-laki') {'checked';}?>>Laki laki
                     <input name="jenis_kelamin" type="radio" value="Perempuan" <?php if($jk=='perempuan') {'checked';}?>>Perempuan

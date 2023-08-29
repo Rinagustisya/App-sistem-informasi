@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $kelas = $_POST['kelas'];
     
     //buat query update
-    $sql = "UPDATE siswa SET nama_lengkap='$nama', alamat='$alamat', jenis_kelamin='$jk' , no_telp='$no_telp' , kelas ='$kelas' WHERE nis=$nis";
-
+    $sql = "UPDATE siswa SET nama_lengkap='$nama',alamat='$alamat',jenis_kelamin='$jk',no_telp='$no_telp',kelas ='$kelas' WHERE nis=$nis";
+    $query = mysqli_query($db, $sql) or die(mysqli_error($db));
     //check apakah update berhasil?
     if ($query) {
        header('location:index.php?status=sukses');

@@ -53,7 +53,7 @@
                             echo "<td>".$siswa['kelas']."</td>";
                             echo "<td>";
                             echo "<a href= 'form.php?nis=".$siswa['nis']."'>Edit</a> | ";
-                            echo "<a href= 'hapus.php?nis=".$siswa['nis']."'>Hapus</a> | ";
+                            echo "<a href= 'hapus.php?nis=".$siswa['nis']."'>Hapus</a> ";
                             echo "</td>";
                             echo "</tr>";
                         }
